@@ -114,7 +114,7 @@ size_t index_of(struct list_node * head, struct list_node * node);
  * Here is an example that illustrates the intended usage, assuming <tt>struct my_data_type</tt>
  * includes members @c x and @c list1:
  * @code
- * struct list_node headptr = // some list head
+ * struct list_node * headptr = // some list head
  * list_foreach(headptr, node) {
  *   struct my_data_type * objptr = list_object(node, struct my_data_type, list1);
  *   printf("objptr->x = %d\n", objptr->x);
