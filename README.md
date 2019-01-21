@@ -1,6 +1,6 @@
 # csx730-list
 
-**DUE FRI 2019-02-01 (Feb 1) @ 11:55 PM**
+**DUE MON 2019-02-04 (Feb 4) @ 11:55 PM**
 
 This repository contains the skeleton code for the `csx730-list` project
 assigned to the students in the Spring 2019 CSCI 4730/6730 class
