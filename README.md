@@ -194,6 +194,10 @@ being subtracted from your point total. That is, they are all or nothing.
    with no errors or warnings usign the `all` target, then it will very likely
    do the same with the `test` target.
 
+1. __(100 points) Libraries:__ You are allowed to use any of the C standard library
+   functions. A reference is provided [here](https://en.cppreference.com/w/c).
+   No other libraries are permitted.
+
 1. __(100 points) `SUBMISSION.md`:__ Your project must include a properly formatted 
    `SUBMISSION.md` file that includes, at a minimum, the following information:
 
@@ -221,11 +225,12 @@ being subtracted from your point total. That is, they are all or nothing.
    help fulfill this non-functional requirement.
 
 1. __(25 points) Memory Leaks:__ Your submission should not result in any memory leaks.
-   You an check this with `valgrind(1)`.
+   The greader will check this using `valgrind(1)`.
 
 1. __(25 points) Code Documentation:__ Any new functions or macros must be properly documented
    using Javadoc-style comments. An example of such comments can be seen in the souce code
-   provided with the project.
+   provided with the project. Please also use inline documentation, as needed, to explain
+   ambiguous or tricky parts of your code.
 
 ## Submission Instructions
 
