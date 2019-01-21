@@ -75,10 +75,10 @@ This should create a directory called `csx730-list` in your present working dire
 the project files. For this project, the only files that are included with the project download
 are listed near the top of the page [here](https://github.com/cs1730/csx730-list).
 
-Here is a table that briely outlines each file in the skeleton code.
+Here is a table that briely outlines each file in the skeleton code:
 
-| File                   | Description |
-|------------------------|-------------|
+| File                   | Description                                                      |
+|------------------------|------------------------------------------------------------------|
 | `Doxyfile`             | Configuration file for `doxygen`.                                |
 | `Makefile`             | Configuration file for `make`.                                   |
 | `README.md`            | This project description.                                        |
