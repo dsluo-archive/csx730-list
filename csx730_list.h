@@ -124,7 +124,7 @@ size_t index_of(struct list_node * head, struct list_node * node);
  * @param head pointer to head of the list
  * @param node pointer name for use in the the @c for loop
  */
-#define list_foreach(head, node) 
+#define list_foreach(head, node) 0
 
 
 // the following #endif is for the header guard
