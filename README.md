@@ -110,7 +110,7 @@ The actual functionality is tested using test cases.
    * (10 points) `struct list_node * list_get(struct list_node *, size_t);`
    * (10 points) `struct list_node * list_remove(struct list_node *, size_t);`
    * (10 points) `size_t list_size(struct list_node *);`
-   * (10 points) `size_t index_of(struct list_node *, struct list_node *);
+   * (10 points) `size_t index_of(struct list_node *, struct list_node *);`
 
    The documentation for each function is provided directly in
    `csx730_list.h`. You may generate an HTML version of the corresponding
