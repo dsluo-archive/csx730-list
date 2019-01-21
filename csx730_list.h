@@ -36,7 +36,8 @@ struct list_node {
 typedef long unsigned int size_t;
 
 /**
- * Initializes the linked list. 
+ * Initializes the linked list. A single node in a linked list is properly initialized if the other
+ * list functions are able to properly operate on that node.
  * @param head head of the list
  */
 void list_init(struct list_node * head);
@@ -81,7 +82,7 @@ struct list_node * list_get(struct list_node * head, size_t index);
 struct list_node * list_remove(struct list_node * head, size_t index);
 
 /**
- * Returns the number of nodes in this list.
+ * Returns the number of nodes in this list. If @p head is a null pointer, then the size is @c 0.
  * @param head head of the list
  */
 size_t list_size(struct list_node * head);
