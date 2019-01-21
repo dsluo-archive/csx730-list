@@ -8,6 +8,82 @@ at the University of Georgia.
 
 ## Intrusive Linked List
 
+In a regular, non-intrusive linked list implementation, the nodes of the linked list contain the 
+list items:
+
+```c
+struct list_node {
+  struct some_type data;
+  struct list_node * next;
+};
+```
+
+The implementation of a singly linked list provided above is one that students are usually most
+familiar with from their Data Structures course. It has many pros and cons, which we will not list
+here. One major disadvantage of this popular implementation is that it makes it more difficult for
+items to be involved in multiple lists concurrently unless we decide to make list nodes carry pointers
+to their items instead of the items themeselves--i.e., using something like `struct some_type *` 
+instead of `struct some_type` in the example presented above. 
+
+This might not seem like a big deal, but it increases the overall complexity of memory allocation for 
+all lists involved. In most scenarios, the list implementation will require dynamic memory 
+allocation to add more nodes. In fact, it is a pretty safe bet to assume that is how you implemented
+your own linked list when asked to do so for a project in a previous class.
+
+In an operating system kernel, we would like to provide a linked list implementation that minimizes 
+and/or eliminates dynamic memory allocation for list manageent. This is where **intrusive linked lists** 
+come into play. Here is a structure for a node in an intrusive, singly linked list:
+
+```c
+struct list_node {
+  struct list_node * next;
+};
+```
+
+The node structure itself is slightly simpler than the one presented earlier--it lacks a data member and
+is therefore independent of a data member type without the need for a pointer. Why is it called
+"instrusive"? Well, that comes from how it's used. Here is a structure for some items that are involved 
+in two intrusive linked lists called `list1` and `list2`:
+
+```c
+struct data_item {
+  unsigned int x;
+  struct list_node list1;
+  struct list_node list2;
+};
+```
+
+The structure above illustrates why this kind of list implementation is called intrusive. It looks
+like an item contains the lists and not the other way around! That is, the lists intrude on the
+structures of their items.
+
+In this project, you are tasked with implementing an intrusive, doubly linked list! The details
+are provided below.
+
+## ## How to Download the Project
+
+On Nike, execute the following terminal command in order to download the project
+files into sub-directory within your present working directory:
+
+```
+$ git clone https://github.com/cs1730/csx730-list.git
+```
+
+This should create a directory called `csx730-list` in your present working directory that contains
+the project files. For this project, the only files that are included with the project download
+are listed near the top of the page [here](https://github.com/cs1730/csx730-list).
+
+If any updates to the project files are announced by your instructor, you can
+merge those changes into your copy by changing into your project directory
+on Nike and issuing the following terminal command:
+
+```
+$ git pull
+```
+
+If you have any problems with any of these procedures, then please contact
+your instructor via Piazza. 
+
 ## Project Requirements
 
 This assignment is worth 100 points. The lowest possible grade is 0, and the 
@@ -55,7 +131,8 @@ The actual functionality is tested using test cases.
 
 For the purposes of grading, a 6730 requirement is treated as a non-functional requirement
 for students enrolled in CSCI 6730 and a functional requirement for students enrolled in
-CSCI 4730. 
+CSCI 4730. This effectively provides an extra credit opportunity to the undergraduate
+students and a non-compliance penalty for the graduate students.
 
 1. __(5 points) [PRETTY] Implement pretty printing for your list implementation.__ Add the
    following prototype to `csx730_list.h` (and implement it in `csx730_list.c): 
@@ -80,7 +157,8 @@ CSCI 4730.
    Provide a commented, functional demo in the `main` function that illustrates each list
    function and macro. This demo should clearly show that each function works correctly. In order
    to recieve points for this requirement, you must include at least one structure that is involved
-   with two or more lists. Output to standard output is expected. 
+   with two or more lists. Furthermore, some of the data structures involed in the lists should
+   be dynamically allocated. Output to standard output is expected. 
 
 ### Non-Functional Requirements
 
