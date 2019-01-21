@@ -60,7 +60,7 @@ structures of their items.
 In this project, you are tasked with implementing an intrusive, doubly linked list! The details
 are provided below.
 
-## ## How to Download the Project
+## How to Download the Project
 
 On Nike, execute the following terminal command in order to download the project
 files into sub-directory within your present working directory:
@@ -170,6 +170,12 @@ being subtracted from your point total. That is, they are all or nothing.
    using the provided `Makefile` and `gcc` (GCC) 8.2.0. Your code must compile,
    assemble, and link with no errors or warnings. The required compiler
    flags for this project are already included in the provided `Makefile`.
+
+   The grader will compile and test your code using `all` and `test` targets in
+   the provided `Makefile`. The `test` target will not work until the test driver
+   is provided during grading. If your code compiles, assembles, and links
+   with no errors or warnings usign the `all` target, then it will very likely
+   do the same with the `test` target.
 
 1. __(100 points) `SUBMISSION.md`:__ Your project must include a properly formatted 
    `SUBMISSION.md` file that includes, at a minimum, the following information:
