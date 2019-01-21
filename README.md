@@ -8,6 +8,16 @@ This repository contains the skeleton code for the `csx730-list` project
 assigned to the students in the Spring 2019 CSCI 4730/6730 class
 at the University of Georgia.
 
+## Academic Honesty
+
+You agree to the Academic Honesty policy as outlined in the course syllabus. 
+In accordance with this notice, I must caution you **not** to fork this repository
+on GitHub if you have an account. Doing so will more than likely make your copy of
+the project publicly visible. Please follow the instructions contained in the 
+[How to Get the Skeleton Code](#how-to-get-the-skeleton-code) section below in
+order to do your development on Nike. Furthermore, you must adhere to the copyright
+notice and licensing information at the bottom of this document.
+
 ## Intrusive Linked List
 
 In a regular, non-intrusive linked list implementation, the nodes of the linked list contain the 
