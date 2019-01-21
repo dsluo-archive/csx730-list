@@ -62,7 +62,7 @@ structures of their items.
 In this project, you are tasked with implementing an intrusive, doubly linked list! The details
 are provided below.
 
-## How to Download the Project
+## How to Get the Skeleton Code
 
 On Nike, execute the following terminal command in order to download the project
 files into sub-directory within your present working directory:
@@ -74,6 +74,18 @@ $ git clone https://github.com/cs1730/csx730-list.git
 This should create a directory called `csx730-list` in your present working directory that contains
 the project files. For this project, the only files that are included with the project download
 are listed near the top of the page [here](https://github.com/cs1730/csx730-list).
+
+Here is a table that briely outlines each file in the skeleton code.
+
+| File                   | Description |
+|------------------------|-------------|
+| `Doxyfile`             | Configuration file for `doxygen`.                                |
+| `Makefile`             | Configuration file for `make`.                                   |
+| `README.md`            | This project description.                                        |
+| `SUBMISSION.md`        | Student submission information.                                  |
+| `csx730_list.c`        | Where you will put most of your list implementation.             |
+| `csx730_list.h`        | List function prototypes and macros.                             |
+| `csx730_list_driver.c` | Where the `main` method lives for the  __[DRIVER]__ requirement. |
 
 If any updates to the project files are announced by your instructor, you can
 merge those changes into your copy by changing into your project directory
