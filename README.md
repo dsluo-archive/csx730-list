@@ -111,9 +111,10 @@ The actual functionality is tested using test cases.
    * (10 points) `size_t index_of(struct list_node *, struct list_node *);
 
    The documentation for each function is provided directly in
-   `csx730_list.h`. Students should not modify the prototypes for these
-   functions in any way--doing so will cause the tester used by the
-   grader to fail. 
+   `csx730_list.h`. You may generate an HTML version of the corresponding
+   documentation using the `doc` target provided by the project's `Makefile`.
+   Students should not modify the prototypes for these functions in any way--doing
+   so will cause the tester used by the grader to fail. 
 
 1. __(20 points) Implement `csx730_list.h` macros in `csx730_list.h`.__
    Each of the macros partially defined in `csx730_list.h` must be
@@ -123,9 +124,11 @@ The actual functionality is tested using test cases.
    * `list_object(node, type, member)`
    * `list_foreach(head, node)`
 
-   The documentation for each macro is provided directly in `csx730_list.h`. Students will
-   need to modify `csx730_list.h` to properly implement the macros. Currently, each
-   macro expands to `0`. 
+   The documentation for each macro is provided directly in `csx730_list.h`.
+   You may generate an HTML version of the corresponding documentation using
+   the `doc` target provided by the project's `Makefile`. Students will
+   need to modify `csx730_list.h` to properly implement the macros. Currently,
+   each macro expands to `0`. 
 
 ### 6730 Requirements
 
