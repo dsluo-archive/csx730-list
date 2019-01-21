@@ -69,8 +69,8 @@ The structure above illustrates why this kind of list implementation is called i
 like an item contains the lists and not the other way around! That is, the lists intrude on the
 structures of their items.
 
-In this project, you are tasked with implementing an intrusive, doubly linked list! The details
-are provided below.
+In this project, you are tasked with implementing an __intrusive, doubly linked list__! The
+structure for list nodes is provided. Other project details are provided below.
 
 ## How to Get the Skeleton Code
 
