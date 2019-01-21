@@ -162,7 +162,7 @@ CSCI 4730. This effectively provides an extra credit opportunity to the undergra
 students and a non-compliance penalty for the graduate students.
 
 1. __(5 points) [PRETTY] Implement pretty printing for your list implementation.__ Add the
-   following prototype to `csx730_list.h` (and implement it in `csx730_list.c): 
+   following prototype to `csx730_list.h` (and implement it in `csx730_list.c`): 
 
    ```c
    /**
