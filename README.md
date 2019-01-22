@@ -235,7 +235,7 @@ being subtracted from your point total. That is, they are all or nothing.
    help fulfill this non-functional requirement.
 
 1. __(25 points) Memory Leaks:__ Your submission should not result in any memory leaks.
-   The greader will check this using `valgrind(1)`.
+   The grader will check this using `valgrind(1)`.
 
 1. __(25 points) Code Documentation:__ Any new functions or macros must be properly documented
    using Javadoc-style comments. An example of such comments can be seen in the souce code
