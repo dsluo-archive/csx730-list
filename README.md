@@ -10,7 +10,7 @@ at the University of Georgia.
 
 ## Updates
 
-* **2019-01-25:** Updated the documentation for the @c list_add_all method concerning
+* **2019-01-25:** Updated the documentation for the `list_add_all` method concerning
   the expected sentinel value in the variadic argument list.
 
 ## Academic Honesty
