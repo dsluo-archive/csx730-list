@@ -51,7 +51,9 @@ void list_append(struct list_node * head, struct list_node * node);
 
 /**
  * Appends the specified nodes to the end of this list. The expected type of each variadic
- * argument is <tt>struct list_node *</tt>.
+ * argument is <tt>struct list_node *</tt>. The list of arguments must be terminated by a 
+ * @c 0 (<tt>NULL</tt>) pointer, and, since this is a variadic function, this sentinel pointer 
+ * must be cast to <tt>(struct list_node *) 0</tt>.
  * @param head head of the list
  * @param ... nodes to add
  */
