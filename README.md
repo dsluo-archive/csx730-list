@@ -8,6 +8,11 @@ This repository contains the skeleton code for the `csx730-list` project
 assigned to the students in the Spring 2019 CSCI 4730/6730 class
 at the University of Georgia.
 
+## Updates
+
+* **2019-01-25:** Updated the documentation for the @c list_add_all method concerning
+  the expected sentinel value in the variadic argument list.
+
 ## Academic Honesty
 
 You agree to the Academic Honesty policy as outlined in the course syllabus. 
