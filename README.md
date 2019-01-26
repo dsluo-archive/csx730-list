@@ -206,7 +206,7 @@ being subtracted from your point total. That is, they are all or nothing.
    The grader will compile and test your code using `all` and `test` targets in
    the provided `Makefile`. The `test` target will not work until the test driver
    is provided during grading. If your code compiles, assembles, and links
-   with no errors or warnings usign the `all` target, then it will very likely
+   with no errors or warnings using the `all` target, then it will very likely
    do the same with the `test` target.
 
 1. __(100 points) Libraries:__ You are allowed to use any of the C standard library
