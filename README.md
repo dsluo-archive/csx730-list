@@ -48,7 +48,7 @@ allocation to add more nodes. In fact, it is a pretty safe bet to assume that is
 your own linked list when asked to do so for a project in a previous class.
 
 In an operating system kernel, we would like to provide a linked list implementation that minimizes 
-and/or eliminates dynamic memory allocation for list manageent. This is where **intrusive linked lists** 
+and/or eliminates dynamic memory allocation for list management. This is where **intrusive linked lists** 
 come into play. Here is a structure for a node in an intrusive, singly linked list:
 
 ```c
