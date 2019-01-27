@@ -48,7 +48,7 @@ allocation to add more nodes. In fact, it is a pretty safe bet to assume that is
 your own linked list when asked to do so for a project in a previous class.
 
 In an operating system kernel, we would like to provide a linked list implementation that minimizes 
-and/or eliminates dynamic memory allocation for list manageent. This is where **intrusive linked lists** 
+and/or eliminates dynamic memory allocation for list management. This is where **intrusive linked lists** 
 come into play. Here is a structure for a node in an intrusive, singly linked list:
 
 ```c
@@ -206,7 +206,7 @@ being subtracted from your point total. That is, they are all or nothing.
    The grader will compile and test your code using `all` and `test` targets in
    the provided `Makefile`. The `test` target will not work until the test driver
    is provided during grading. If your code compiles, assembles, and links
-   with no errors or warnings usign the `all` target, then it will very likely
+   with no errors or warnings using the `all` target, then it will very likely
    do the same with the `test` target.
 
 1. __(100 points) Libraries:__ You are allowed to use any of the C standard library
