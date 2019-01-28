@@ -60,12 +60,14 @@ void list_append(struct list_node * head, struct list_node * node);
 void list_append_all(struct list_node * head, ...);
 
 /**
- * Inserts the specified node at the specified position in this list.
+ * Inserts the specified node at the specified position in this list. If @p index
+ * is given as @c 0, then @p node is returned; otherwise, @p head is returned.
  * @param head head of the list
  * @param node node to insert
  * @param index index at which the specified node is to be inserted
+ * @return head of the list
  */
-void list_insert(struct list_node * head, struct list_node * node, size_t index);
+struct list_node * list_insert(struct list_node * head, struct list_node * node, size_t index);
 
 /**
  * Returns a pointer to the node at the specified position in this list.

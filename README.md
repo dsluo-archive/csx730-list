@@ -10,7 +10,11 @@ at the University of Georgia.
 
 ## Updates
 
-* **2019-01-25:** Updated the documentation for the `list_add_all` method concerning
+* **2019-01-28:** Updated prototype and corresponding documentation for the `list_insert`
+  function to indicate that the head of the linked list is returned. This is convenient
+  when prepending to the list.
+
+* **2019-01-25:** Updated the documentation for the `list_add_all` function concerning
   the expected sentinel value in the variadic argument list.
 
 ## Academic Honesty
@@ -133,7 +137,7 @@ The actual functionality is tested using test cases.
    * (10 points) `void list_init(struct list_node *);`
    * (10 points) `void list_append(struct list_node *, struct list_node *);`
    * (10 points) `void list_append_all(struct list_node * head, ...);`
-   * (10 points) `void list_insert(struct list_node *, struct list_node *, size_t);`
+   * (10 points) `struct list_node * list_insert(struct list_node *, struct list_node *, size_t);`
    * (10 points) `struct list_node * list_get(struct list_node *, size_t);`
    * (10 points) `struct list_node * list_remove(struct list_node *, size_t);`
    * (10 points) `size_t list_size(struct list_node *);`
