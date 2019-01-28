@@ -79,7 +79,9 @@ struct list_node * list_get(struct list_node * head, size_t index);
 /**
  * Removes the node at the specified position in this list. Shifts any subsequent elements to the
  * left (subtracts one from their indices). Returns a pointer to the head of the list. If the
- * removed entry is needed, then @c list_get shuld be used before calling this function.
+ * removed entry is needed, then @c list_get shuld be used before calling this function. If the
+ * size of the list is @c 1 and @p head is removed, then this funcion should return a
+ * @c 0 (<tt>NULL</tt>) pointer.
  * @param head head of the list
  * @param index index of the node to remove
  * @return head of the list
