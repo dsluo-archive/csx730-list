@@ -10,6 +10,10 @@ at the University of Georgia.
 
 ## Updates
 
+* **2019-01-28:** Updated prototype and corresponding documentation for the `list_remove`
+  function to indicate that the head of the linked list is returned. This is convenient
+  when removing the head itself.
+
 * **2019-01-28:** Updated prototype and corresponding documentation for the `list_insert`
   function to indicate that the head of the linked list is returned. This is convenient
   when prepending to the list.
