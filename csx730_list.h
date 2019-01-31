@@ -110,7 +110,9 @@ size_t index_of(struct list_node * head, struct list_node * node);
  * @param type name of the @c struct type containing the node pointed to by @p node 
  * @param member name of the member in @p type that refers to the desired @c list_node
  */
-#define list_object(node, type, member) 0
+#define list_object(node, type, member) ({ \
+        0 \
+})
 
 /**
  * Expands to the declaration for a @c for loop that iterates over the given list. Inside of
