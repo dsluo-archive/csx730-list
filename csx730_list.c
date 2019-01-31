@@ -20,18 +20,18 @@ void list_append(struct list_node * head, struct list_node * node) {
 void list_append_all(struct list_node * head, ...) {
     va_list args;
     va_start(args, head);
-
-    struct list_node * node = va_arg(args, struct list_node *);
-    while (node != NULL) {
+   
+    for (struct list_node * node = va_arg(args, struct list_node *);
+                node != NULL;
+                node = va_arg(args, struct list_node *)) {
         list_append(head, node);
-        node = va_arg(args, struct list_node *);
     }
     va_end(args);
 }
 
 struct list_node * list_insert(struct list_node * head, struct list_node * node, size_t index) {
     struct list_node * insert_before = list_get(head, index);
-    struct list_node * insert_after = insert_before->prev;
+    struct list_node * insert_after = insert_before != NULL ? insert_before->prev : NULL;
 
     if (insert_after != NULL) {
         insert_after->next = node;
@@ -46,26 +46,31 @@ struct list_node * list_insert(struct list_node * head, struct list_node * node,
 }
 
 struct list_node * list_get(struct list_node * head, size_t index) {
-    struct list_node * curr = head;
     for (size_t i = 0; i < index; i++) {
-        curr = head->next;
+        if (head != NULL && head->next != NULL)
+            head = head->next;
+        else
+            head = NULL;
     }
-    return curr;
+    return head;
 }
 
 struct list_node * list_remove(struct list_node * head, size_t index) {
+    struct list_node * new_head = index == 0 ? head->next : head;
     struct list_node * remove_this = list_get(head, index);
+    
+    if (remove_this != NULL) {
+        if (remove_this->prev != NULL) {
+            remove_this->prev->next = remove_this->next;
+        }
+        if (remove_this->next != NULL) {
+            remove_this->next->prev = remove_this->prev;
+        }
 
-    if (remove_this->prev != NULL) {
-        remove_this->prev->next = remove_this->next;
+        free(remove_this);
     }
-    if (remove_this->next != NULL) {
-        remove_this->next->prev = remove_this->prev;
-    }
 
-    free(remove_this);
-
-    return head;
+    return new_head;
 }
 
 size_t list_size(struct list_node * head) {
@@ -76,6 +81,7 @@ size_t list_size(struct list_node * head) {
     }
     return size;
 }
+
 size_t index_of(struct list_node * head, struct list_node * node) {
     size_t index = 0;
     while (head != NULL && node != head) {
@@ -87,6 +93,3 @@ size_t index_of(struct list_node * head, struct list_node * node) {
     }
     return index;
 }
-
-#define list_object(node, type, member) 0
-#define list_foreach(head, node) 0
