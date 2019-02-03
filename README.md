@@ -234,7 +234,7 @@ being subtracted from your point total. That is, they are all or nothing.
      would like the grader to check. These requirements will only be checked if you
      include them in this list. 
      
-   * __Reflecton:__ You need to provide answers to the following questions:
+   * __Reflection:__ You need to provide answers to the following questions:
 
      1. What do you think was the motivation behind assigning this project in this class?
      1. What is the most important thing you learned in this project?
