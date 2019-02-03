@@ -110,9 +110,7 @@ size_t index_of(struct list_node * head, struct list_node * node);
  * @param type name of the @c struct type containing the node pointed to by @p node 
  * @param member name of the member in @p type that refers to the desired @c list_node
  */
-#define list_object(node, type, member) ({ \
-        0 \
-})
+#define list_object(node, type, member) ((type *) ((char *) node - (char *) &((type *) 0)->member))
 
 /**
  * Expands to the declaration for a @c for loop that iterates over the given list. Inside of
@@ -134,8 +132,21 @@ size_t index_of(struct list_node * head, struct list_node * node);
  * @param head pointer to head of the list
  * @param node pointer name for use in the the @c for loop
  */
-#define list_foreach(head, node) 0
+#define list_foreach(head, node) for (struct list_node * node=head; node != NULL; node=node->next)
 
+/**
+ * Prints the list to a line in standard output with the help of @p to_string. Assume
+ * @p to_string returns a new string representation of the structure a node intrudes upon,
+ * formatted similarly to <tt>data(7, 2.0)</tt>. Then, the output that this function produces
+ * to standard output might look like the following for a list containing three nodes:
+ * <tt>{ data(7, 2.0), data(3, 2.2), data(9, 1.4) }</tt>. You should assume that the memory
+ * for the string returned by @p to_string was obtained with @c malloc(3) and should be freed
+ * with @c free(3). You may assume that all nodes in the list intrude on the same type of
+ * structure. 
+ * @param head head of the list
+ * @param to_string function that returns a string representaton of a node's enclosing structure
+ */
+void list_pretty_print(struct list_node * head, char * (* to_string)(struct list_node *));
 
 // the following #endif is for the header guard
 #endif
