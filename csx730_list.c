@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 #include "csx730_list.h"
 
@@ -30,8 +31,16 @@ void list_append_all(struct list_node * head, ...) {
 }
 
 struct list_node * list_insert(struct list_node * head, struct list_node * node, size_t index) {
-    struct list_node * insert_before = list_get(head, index);
-    struct list_node * insert_after = insert_before != NULL ? insert_before->prev : NULL;
+    struct list_node * insert_before;    
+    struct list_node * insert_after;
+
+    insert_before = list_get(head, index);
+    if (insert_before != NULL)
+        insert_after = insert_before->prev;
+    else {
+        insert_after = list_get(head, index - 1);
+        insert_before = insert_after->next; 
+    }
 
     if (insert_after != NULL) {
         insert_after->next = node;
@@ -67,7 +76,9 @@ struct list_node * list_remove(struct list_node * head, size_t index) {
             remove_this->next->prev = remove_this->prev;
         }
 
-        free(remove_this);
+        remove_this->next = NULL;
+        remove_this->prev = NULL;
+
     }
 
     return new_head;
@@ -92,4 +103,22 @@ size_t index_of(struct list_node * head, struct list_node * node) {
         index = -1;
     }
     return index;
+}
+
+void list_pretty_print(struct list_node * head, char * (* to_string)(struct list_node *)) {
+    list_foreach(head, node) {
+        if (node->prev == NULL) {
+            printf("{ ");
+        }
+
+        char * string = to_string(node);
+        printf(string);
+        free(string);
+
+        if (node->next == NULL) {
+            printf(" }\n");
+        } else {
+            printf(", ");
+        }
+    }
 }
